@@ -94,7 +94,7 @@ log_empty_line
 installed_packages_count=$(wc -w <<< "${installed_packages}")
 log "Caching ${installed_packages_count} installed packages..."
 for installed_package in ${installed_packages}; do
-  cache_filepath="${cache_dir}/${installed_package}.tar"
+  cache_filepath="${cache_dir}/${installed_package}.tar.gz"
 
   # Sanity test in case APT enumerates duplicates.
   if test ! -f "${cache_filepath}"; then
